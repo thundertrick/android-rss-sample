@@ -21,13 +21,13 @@ public class MainActivity extends AppCompatActivity implements RssManager.feedCa
     }
 
     @Override
-    public void onFeedUpdate(RSSFeed feed) {
+    public void onFeedUpdate(String feed) {
         if (feed == null) {
             return;
         }
-        Log.d(TAG, feed.getDescription());
-        for (RSSItem item : feed.getItems()) {
-            Log.d(TAG, item.getTitle());
-        }
+        Log.d(TAG, feed);
+//        for (RSSItem item : feed.getItems()) {
+//            Log.d(TAG, item.getTitle());
+//        }
     }
 }
